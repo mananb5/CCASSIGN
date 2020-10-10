@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:green">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>Shop Id</h3>
+            <input id="first" name="shop_id" type="number ">
+            <h3>Item Id</h3><br><input id="second" name="item_id" required="required">
+            <h3>Price</h3><br><input id="second" name="item_price" required="required">
+            <br><br><button id="sub" type="submit ">Calculate the Item count per month</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: #f7f73e;
+            text-align: center;
+            padding: 0px;
+        }
+        
+       
+        
+        
+        #sub {
+            
+            border-radius: 14px;
+            font-size: 15px;
+	    padding: 45px 32px;
+  	    color: green;
+	
+        }
+        
+        #sub:hover {
+            background-color: #fa8900;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+       
+    </style>
+</body>
+
+</html>
